@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A5BF02621F9CBC90037A18F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BF02521F9CBC90037A18F /* AppDelegate.swift */; };
+		0A5BF02821F9CBC90037A18F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BF02721F9CBC90037A18F /* ViewController.swift */; };
+		0A5BF02B21F9CBC90037A18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5BF02921F9CBC90037A18F /* Main.storyboard */; };
+		0A5BF02E21F9CBC90037A18F /* ChatOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BF02C21F9CBC90037A18F /* ChatOne.xcdatamodeld */; };
+		0A5BF03021F9CBCA0037A18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5BF02F21F9CBCA0037A18F /* Assets.xcassets */; };
+		0A5BF03321F9CBCA0037A18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5BF03121F9CBCA0037A18F /* LaunchScreen.storyboard */; };
+		0A5BF03E21F9CBCA0037A18F /* ChatOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BF03D21F9CBCA0037A18F /* ChatOneTests.swift */; };
+		0A5BF04921F9CBCA0037A18F /* ChatOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BF04821F9CBCA0037A18F /* ChatOneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A5BF03A21F9CBCA0037A18F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A5BF01A21F9CBC90037A18F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A5BF02121F9CBC90037A18F;
+			remoteInfo = ChatOne;
+		};
+		0A5BF04521F9CBCA0037A18F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A5BF01A21F9CBC90037A18F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A5BF02121F9CBC90037A18F;
+			remoteInfo = ChatOne;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A5BF02221F9CBC90037A18F /* ChatOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5BF02521F9CBC90037A18F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A5BF02721F9CBC90037A18F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A5BF02A21F9CBC90037A18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A5BF02D21F9CBC90037A18F /* ChatOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatOne.xcdatamodel; sourceTree = "<group>"; };
+		0A5BF02F21F9CBCA0037A18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A5BF03221F9CBCA0037A18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A5BF03421F9CBCA0037A18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5BF03921F9CBCA0037A18F /* ChatOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5BF03D21F9CBCA0037A18F /* ChatOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOneTests.swift; sourceTree = "<group>"; };
+		0A5BF03F21F9CBCA0037A18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5BF04421F9CBCA0037A18F /* ChatOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5BF04821F9CBCA0037A18F /* ChatOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOneUITests.swift; sourceTree = "<group>"; };
+		0A5BF04A21F9CBCA0037A18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A5BF01F21F9CBC90037A18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF03621F9CBCA0037A18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF04121F9CBCA0037A18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A5BF01921F9CBC90037A18F = {
+			isa = PBXGroup;
+			children = (
+				0A5BF02421F9CBC90037A18F /* ChatOne */,
+				0A5BF03C21F9CBCA0037A18F /* ChatOneTests */,
+				0A5BF04721F9CBCA0037A18F /* ChatOneUITests */,
+				0A5BF02321F9CBC90037A18F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A5BF02321F9CBC90037A18F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A5BF02221F9CBC90037A18F /* ChatOne.app */,
+				0A5BF03921F9CBCA0037A18F /* ChatOneTests.xctest */,
+				0A5BF04421F9CBCA0037A18F /* ChatOneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A5BF02421F9CBC90037A18F /* ChatOne */ = {
+			isa = PBXGroup;
+			children = (
+				0A5BF02521F9CBC90037A18F /* AppDelegate.swift */,
+				0A5BF02721F9CBC90037A18F /* ViewController.swift */,
+				0A5BF02921F9CBC90037A18F /* Main.storyboard */,
+				0A5BF02F21F9CBCA0037A18F /* Assets.xcassets */,
+				0A5BF03121F9CBCA0037A18F /* LaunchScreen.storyboard */,
+				0A5BF03421F9CBCA0037A18F /* Info.plist */,
+				0A5BF02C21F9CBC90037A18F /* ChatOne.xcdatamodeld */,
+			);
+			path = ChatOne;
+			sourceTree = "<group>";
+		};
+		0A5BF03C21F9CBCA0037A18F /* ChatOneTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A5BF03D21F9CBCA0037A18F /* ChatOneTests.swift */,
+				0A5BF03F21F9CBCA0037A18F /* Info.plist */,
+			);
+			path = ChatOneTests;
+			sourceTree = "<group>";
+		};
+		0A5BF04721F9CBCA0037A18F /* ChatOneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A5BF04821F9CBCA0037A18F /* ChatOneUITests.swift */,
+				0A5BF04A21F9CBCA0037A18F /* Info.plist */,
+			);
+			path = ChatOneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A5BF02121F9CBC90037A18F /* ChatOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5BF04D21F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOne" */;
+			buildPhases = (
+				0A5BF01E21F9CBC90037A18F /* Sources */,
+				0A5BF01F21F9CBC90037A18F /* Frameworks */,
+				0A5BF02021F9CBC90037A18F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatOne;
+			productName = ChatOne;
+			productReference = 0A5BF02221F9CBC90037A18F /* ChatOne.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A5BF03821F9CBCA0037A18F /* ChatOneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5BF05021F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOneTests" */;
+			buildPhases = (
+				0A5BF03521F9CBCA0037A18F /* Sources */,
+				0A5BF03621F9CBCA0037A18F /* Frameworks */,
+				0A5BF03721F9CBCA0037A18F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A5BF03B21F9CBCA0037A18F /* PBXTargetDependency */,
+			);
+			name = ChatOneTests;
+			productName = ChatOneTests;
+			productReference = 0A5BF03921F9CBCA0037A18F /* ChatOneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A5BF04321F9CBCA0037A18F /* ChatOneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5BF05321F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOneUITests" */;
+			buildPhases = (
+				0A5BF04021F9CBCA0037A18F /* Sources */,
+				0A5BF04121F9CBCA0037A18F /* Frameworks */,
+				0A5BF04221F9CBCA0037A18F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A5BF04621F9CBCA0037A18F /* PBXTargetDependency */,
+			);
+			name = ChatOneUITests;
+			productName = ChatOneUITests;
+			productReference = 0A5BF04421F9CBCA0037A18F /* ChatOneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A5BF01A21F9CBC90037A18F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Monash University";
+				TargetAttributes = {
+					0A5BF02121F9CBC90037A18F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0A5BF03821F9CBCA0037A18F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0A5BF02121F9CBC90037A18F;
+					};
+					0A5BF04321F9CBCA0037A18F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0A5BF02121F9CBC90037A18F;
+					};
+				};
+			};
+			buildConfigurationList = 0A5BF01D21F9CBC90037A18F /* Build configuration list for PBXProject "ChatOne" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A5BF01921F9CBC90037A18F;
+			productRefGroup = 0A5BF02321F9CBC90037A18F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A5BF02121F9CBC90037A18F /* ChatOne */,
+				0A5BF03821F9CBCA0037A18F /* ChatOneTests */,
+				0A5BF04321F9CBCA0037A18F /* ChatOneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A5BF02021F9CBC90037A18F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5BF03321F9CBCA0037A18F /* LaunchScreen.storyboard in Resources */,
+				0A5BF03021F9CBCA0037A18F /* Assets.xcassets in Resources */,
+				0A5BF02B21F9CBC90037A18F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF03721F9CBCA0037A18F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF04221F9CBCA0037A18F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A5BF01E21F9CBC90037A18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5BF02821F9CBC90037A18F /* ViewController.swift in Sources */,
+				0A5BF02E21F9CBC90037A18F /* ChatOne.xcdatamodeld in Sources */,
+				0A5BF02621F9CBC90037A18F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF03521F9CBCA0037A18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5BF03E21F9CBCA0037A18F /* ChatOneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5BF04021F9CBCA0037A18F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5BF04921F9CBCA0037A18F /* ChatOneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A5BF03B21F9CBCA0037A18F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A5BF02121F9CBC90037A18F /* ChatOne */;
+			targetProxy = 0A5BF03A21F9CBCA0037A18F /* PBXContainerItemProxy */;
+		};
+		0A5BF04621F9CBCA0037A18F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A5BF02121F9CBC90037A18F /* ChatOne */;
+			targetProxy = 0A5BF04521F9CBCA0037A18F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A5BF02921F9CBC90037A18F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A5BF02A21F9CBC90037A18F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A5BF03121F9CBCA0037A18F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A5BF03221F9CBCA0037A18F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A5BF04B21F9CBCA0037A18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A5BF04C21F9CBCA0037A18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A5BF04E21F9CBCA0037A18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A5BF04F21F9CBCA0037A18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A5BF05121F9CBCA0037A18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatOne.app/ChatOne";
+			};
+			name = Debug;
+		};
+		0A5BF05221F9CBCA0037A18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatOne.app/ChatOne";
+			};
+			name = Release;
+		};
+		0A5BF05421F9CBCA0037A18F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChatOne;
+			};
+			name = Debug;
+		};
+		0A5BF05521F9CBCA0037A18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24YRW9J6U2;
+				INFOPLIST_FILE = ChatOneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Monash.ChatOneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChatOne;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A5BF01D21F9CBC90037A18F /* Build configuration list for PBXProject "ChatOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5BF04B21F9CBCA0037A18F /* Debug */,
+				0A5BF04C21F9CBCA0037A18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5BF04D21F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5BF04E21F9CBCA0037A18F /* Debug */,
+				0A5BF04F21F9CBCA0037A18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5BF05021F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5BF05121F9CBCA0037A18F /* Debug */,
+				0A5BF05221F9CBCA0037A18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5BF05321F9CBCA0037A18F /* Build configuration list for PBXNativeTarget "ChatOneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5BF05421F9CBCA0037A18F /* Debug */,
+				0A5BF05521F9CBCA0037A18F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A5BF02C21F9CBC90037A18F /* ChatOne.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A5BF02D21F9CBC90037A18F /* ChatOne.xcdatamodel */,
+			);
+			currentVersion = 0A5BF02D21F9CBC90037A18F /* ChatOne.xcdatamodel */;
+			path = ChatOne.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0A5BF01A21F9CBC90037A18F /* Project object */;
+}
