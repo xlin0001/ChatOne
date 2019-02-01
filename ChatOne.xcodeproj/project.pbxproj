@@ -20,8 +20,9 @@
 		0A5BF05721F9CE0C0037A18F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5BF05621F9CE0C0037A18F /* GoogleService-Info.plist */; };
 		0AA1313621FECF1500D39528 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1313521FECF1500D39528 /* ProfileTableViewController.swift */; };
 		0AA1313A21FEDD0700D39528 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1313921FEDD0700D39528 /* LoginViewController.swift */; };
-		0AA1313E21FEE38B00D39528 /* FristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1313D21FEE38B00D39528 /* FristViewController.swift */; };
 		0AA1314021FEF61400D39528 /* LogNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1313F21FEF61400D39528 /* LogNavViewController.swift */; };
+		0AAB3BAC22001E92008662F9 /* HtableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB3BAB22001E92008662F9 /* HtableViewController.swift */; };
+		0AB2F52F220406C3004BB905 /* UserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2F52E220406C3004BB905 /* UserInfoTableViewController.swift */; };
 		2AC61ECD2F2CB36FC61D826D /* Pods_ChatOneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156986F34A258294C57BA21D /* Pods_ChatOneUITests.framework */; };
 		6E46AD177E563DE945711CB8 /* Pods_ChatOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A42B07A7CE97769907E4AE6 /* Pods_ChatOneTests.framework */; };
 		F692305853DD200D1ECC87D3 /* Pods_ChatOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB1DF543D7581A6380187C /* Pods_ChatOne.framework */; };
@@ -64,8 +65,9 @@
 		0A5BF05621F9CE0C0037A18F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0AA1313521FECF1500D39528 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		0AA1313921FEDD0700D39528 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0AA1313D21FEE38B00D39528 /* FristViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FristViewController.swift; path = /Users/givemepass/Documents/ChatOne/ChatOne/FristViewController.swift; sourceTree = "<absolute>"; };
 		0AA1313F21FEF61400D39528 /* LogNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNavViewController.swift; sourceTree = "<group>"; };
+		0AAB3BAB22001E92008662F9 /* HtableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtableViewController.swift; sourceTree = "<group>"; };
+		0AB2F52E220406C3004BB905 /* UserInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewController.swift; sourceTree = "<group>"; };
 		156986F34A258294C57BA21D /* Pods_ChatOneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatOneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A42B07A7CE97769907E4AE6 /* Pods_ChatOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37287992CEA339B89F15472B /* Pods-ChatOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatOne/Pods-ChatOne.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,9 +135,9 @@
 			children = (
 				0A5BF02521F9CBC90037A18F /* AppDelegate.swift */,
 				0A5BF02721F9CBC90037A18F /* ViewController.swift */,
-				0AA1313D21FEE38B00D39528 /* FristViewController.swift */,
 				0AA1313521FECF1500D39528 /* ProfileTableViewController.swift */,
 				0A5BF02921F9CBC90037A18F /* Main.storyboard */,
+				0AB2F52E220406C3004BB905 /* UserInfoTableViewController.swift */,
 				0AA1313F21FEF61400D39528 /* LogNavViewController.swift */,
 				0AA1313921FEDD0700D39528 /* LoginViewController.swift */,
 				0A5BF02F21F9CBCA0037A18F /* Assets.xcassets */,
@@ -144,6 +146,7 @@
 				0A5BF02C21F9CBC90037A18F /* ChatOne.xcdatamodeld */,
 				0A3CC68721FC1F7500BAD46F /* RegisterViewController.swift */,
 				0A3CC68921FC3D0E00BAD46F /* UserInfo.swift */,
+				0AAB3BAB22001E92008662F9 /* HtableViewController.swift */,
 			);
 			path = ChatOne;
 			sourceTree = "<group>";
@@ -422,6 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB2F52F220406C3004BB905 /* UserInfoTableViewController.swift in Sources */,
+				0AAB3BAC22001E92008662F9 /* HtableViewController.swift in Sources */,
 				0AA1313621FECF1500D39528 /* ProfileTableViewController.swift in Sources */,
 				0AA1314021FEF61400D39528 /* LogNavViewController.swift in Sources */,
 				0A5BF02821F9CBC90037A18F /* ViewController.swift in Sources */,
@@ -429,7 +434,6 @@
 				0A5BF02621F9CBC90037A18F /* AppDelegate.swift in Sources */,
 				0AA1313A21FEDD0700D39528 /* LoginViewController.swift in Sources */,
 				0A3CC68A21FC3D0E00BAD46F /* UserInfo.swift in Sources */,
-				0AA1313E21FEE38B00D39528 /* FristViewController.swift in Sources */,
 				0A3CC68821FC1F7500BAD46F /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

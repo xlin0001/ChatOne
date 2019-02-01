@@ -43,9 +43,37 @@ class RegisterViewController: UIViewController {
                 self.present(alert, animated: true)
                 return
             }
+        let ref = Database.database().reference(fromURL: "https://chatone-4ebde.firebaseio.com/")
+        guard let uid = authResult?.user.uid else{
+                return
+        }
+        let userRef = ref.child("users").child(uid)
+        let values = ["emailAddress": self.emailText.text] as [String : Any]
+        userRef.updateChildValues(values, withCompletionBlock: { (errInUpdate, ref) in
+                if errInUpdate != nil {
+                    let alert = UIAlertController(title: "Error", message: errInUpdate?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Sure", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                    return
+                }
+                // successfully update database
+                self.dismiss(animated: true, completion: nil)
+                
+            })
             
-
     }
+        func loginAfterRegister(){
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (authResult, error) in
+                if error != nil{
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Sure", style: .default, handler: nil))
+                    // Presents alert view controller modally.
+                    self.present(alert, animated: true)
+                    return
+                }
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     /*
