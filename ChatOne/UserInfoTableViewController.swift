@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 class UserInfoTableViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate {
    
@@ -18,6 +19,7 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
     @IBOutlet weak var addText: UITextField!
     @IBOutlet weak var bioText: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
+    
     private var gender = ["female","male"]
     private var picker = UIPickerView()
     private var pickerAccessoryBar: UIToolbar = {
@@ -30,11 +32,12 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.allowsSelection = false
         picker.delegate = self
         picker.dataSource = self
         genderText.inputView = picker
         genderText.inputAccessoryView = pickerAccessoryBar
-        profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageChange)))
+        loadAdminData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,7 +45,39 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     @IBAction func saveInfo(_ sender: Any) {
+        // upload the user image.
+        let storageRef = Storage.storage().reference().child("AdminIdentityImages").child(NSUUID().uuidString)
         
+        // Create file metadata to update
+        let newMetadata = StorageMetadata()
+        newMetadata.cacheControl = "public,max-age=300";
+        newMetadata.contentType = "image/jpeg";
+        
+        if let uploadData = (self.profileImage.image!).pngData(){
+            storageRef.putData(uploadData, metadata: newMetadata, completion: { (metadata, errorForUpload) in
+                // if uploading has errors
+                if errorForUpload != nil {
+                    print(errorForUpload)
+                    return
+                }
+                // if successfully upload, get the absolute url
+                //                    if let identityImageURL = metadata?.downloadURL().absoluteString {
+                //                        print(identityImageURL)
+                //                    }
+                storageRef.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    if let identityImageURL = url?.absoluteString{
+                        let values = ["name": self.nameText.text, "gender": self.genderText.text,"address":self.addText.text,"bio":self.bioText.text, "identityImageURL": identityImageURL] as [String : Any]
+                        self.handleUpdateAdminInfo(values as [String : AnyObject])
+                    }
+                })
+                
+            })
+        }
+         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func changeAction(_ sender: Any) {
@@ -84,9 +119,6 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
         present(alertController, animated: true, completion: nil)
     }
     
-    @objc func imageChange(){
-        print("tapped")
-    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.profileImage.image = pickedImage
@@ -114,6 +146,60 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
     @objc func dissmissKeyBoard(){
         view.endEditing(true)
     }
+    //update the user information
+    func handleUpdateAdminInfo(_ values: [String: AnyObject]){
+        let refHandle = Database.database().reference(fromURL: "https://chatone-4ebde.firebaseio.com/")
+        guard let userUID = Auth.auth().currentUser?.uid else {
+            print("Update error occurs...")
+            return
+        }
+        let currentUserRef = refHandle.child("users").child(userUID)
+        // Updates the values at the specified paths in the dictionary without overwriting other keys at this location.
+        currentUserRef.updateChildValues(values)
+        
+    }
+    
+    // load this administration data from firebase auth.
+   func loadAdminData(){
+        // Gets a FIRDatabaseReference for the provided URL.
+        let refHandle = Database.database().reference(fromURL: "https://chatone-4ebde.firebaseio.com/")
+        
+        guard let userUID = Auth.auth().currentUser?.uid else {
+            print("Loading Admin error occurs...")
+            return
+        }
+        let currentUserRef = refHandle.child("users").child(userUID)
+        // listen for data changes
+        currentUserRef.observe(.value) { (snapshot) -> Void in
+            print(snapshot)
+            let userData = snapshot.value as! Dictionary<String, AnyObject>
+            if let address = userData["address"],
+                let name = userData["name"],
+                let bio = userData["bio"],
+                let gender = userData["gender"],
+                let url = userData["identityImageURL"]
+            {
+                self.nameText.text = name as? String
+                self.addText.text = address as? String
+                self.bioText.text = bio as? String
+                self.genderText.text = gender as? String
+                let imgUrl = URL(string: url as! String)
+                
+                URLSession.shared.dataTask(with: imgUrl!, completionHandler: { (data, response, error) in
+                    if error != nil {
+                        // if download hits an error, so lets return out
+                        print(error)
+                        return
+                    }
+                    // if there is no error happens...
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // in half a second...
+                        self.profileImage.image = UIImage(data: data!)
+                    }
+                }).resume()
+            }
+            
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -126,8 +212,8 @@ class UserInfoTableViewController: UITableViewController,UIImagePickerController
         return 5
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
