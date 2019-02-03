@@ -11,6 +11,8 @@ import Firebase
 
 class ProfileTableViewController: UITableViewController {
 
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var emailText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         if Auth.auth().currentUser?.uid == nil{
@@ -18,11 +20,16 @@ class ProfileTableViewController: UITableViewController {
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LogNavViewController
             self.present(newViewController, animated: true, completion: nil)
         }
+        loadAdminData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadAdminData()
     }
 
     // MARK: - Table view data source
@@ -44,6 +51,45 @@ class ProfileTableViewController: UITableViewController {
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LogNavViewController
                 self.present(newViewController, animated: true, completion: nil)
             }
+        }
+    }
+    
+    func loadAdminData(){
+        // Gets a FIRDatabaseReference for the provided URL.
+        let refHandle = Database.database().reference(fromURL: "https://chatone-4ebde.firebaseio.com/")
+        
+        guard let userUID = Auth.auth().currentUser?.uid else {
+            print("Loading Admin error occurs...")
+            return
+        }
+        let currentUserRef = refHandle.child("users").child(userUID)
+        // listen for data changes
+        currentUserRef.observe(.value) { (snapshot) -> Void in
+            print(snapshot)
+            let userData = snapshot.value as! Dictionary<String, AnyObject>
+            if let address = userData["address"],
+                let name = userData["name"],
+                let emailAddress = userData["emailAddress"],
+                let bio = userData["bio"],
+                let gender = userData["gender"],
+                let url = userData["identityImageURL"]
+            {
+                self.emailText.text = emailAddress as? String
+                let imgUrl = URL(string: url as! String)
+                
+                URLSession.shared.dataTask(with: imgUrl!, completionHandler: { (data, response, error) in
+                    if error != nil {
+                        // if download hits an error, so lets return out
+                        print(error)
+                        return
+                    }
+                    // if there is no error happens...
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // in half a second...
+                        self.profileImg.image = UIImage(data: data!)
+                    }
+                }).resume()
+            }
+            
         }
     }
     
